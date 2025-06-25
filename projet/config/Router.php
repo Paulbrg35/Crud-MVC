@@ -1,40 +1,43 @@
 <?php
 
+require __DIR__ . '/../controllers/UserController.php';
+
 class Router
 {
     public function run()
     {
         $route = $_GET['route'] ?? '';
 
+        $controller = new UserController();
+
         switch ($route) {
             case 'show_user':
-                // Appel à UserController::show()
+                $controller->show();
                 break;
 
             case 'create_user':
-                // Appel à UserController::create()
+                $controller->create();
                 break;
 
             case 'check_create_user':
-                // Appel à UserController::checkCreate()
+                $controller->checkCreate();
                 break;
 
             case 'update_user':
-                // Appel à UserController::update()
+                $controller->update();
                 break;
 
             case 'check_update_user':
-                // Appel à UserController::update()
+                $controller->checkUpdate();
                 break;
 
             case 'delete_user':
-                // Appel à UserController::delete()
+                $controller->delete();
                 break;
 
             default:
-                // Appel à UserController::list()
+                $controller->list();
                 break;
         }
-
     }
 }

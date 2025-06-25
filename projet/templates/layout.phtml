@@ -10,7 +10,11 @@
     </header>
 
     <main>
-        <?php require __DIR__ . '/' . $template . '.phtml'; ?>
+        <?php require __DIR__ . '/users/' . $template . '.phtml'; ?>
     </main>
+
+    <footer>
+        <p>&copy; <?= date('Y') ?> - Mon Application</p>
+    </footer>
 </body>
 </html>
