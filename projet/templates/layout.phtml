@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title><?= htmlspecialchars($pageTitle) ?></title>
+</head>
+<body>
+    <header>
+        <h1><?= htmlspecialchars($pageTitle) ?></h1>
+    </header>
+
+    <main>
+        <?php require __DIR__ . '/' . $template . '.phtml'; ?>
+    </main>
+</body>
+</html>
