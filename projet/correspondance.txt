@@ -1,0 +1,11 @@
+public function list() =  public function findAll(): array //Affiche la liste des utilisateurs
+
+public function show() = public function findOneById(int $id): ?User //Affiche les détails d’un utilisateur spécifique
+
+public function create() = public function insert(User $user): void //Crée un nouvel utilisateur
+
+public function update() = public function update(User $user): void //Met à jour un utilisateur existant
+
+public function delete() = public function delete(User $user): void //Supprime un utilisateur par son ID
+
+gauche UserController, droite UserManager
